@@ -36,6 +36,11 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <script
+          defer
+          data-domain="maparenthesecocoon.be"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
       </head>
       <body>
         <ModalProvider>
