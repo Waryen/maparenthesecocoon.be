@@ -56,6 +56,7 @@ export const Form = () => {
         <input
           type="text"
           id="firstname"
+          placeholder="John"
           aria-label="firstname"
           className="border-2 border-gray-200 p-2 outline-none hover:border-darkVertdeau focus:border-darkVertdeau"
           {...register('firstname')}
@@ -80,6 +81,7 @@ export const Form = () => {
         <input
           type="text"
           id="lastname"
+          placeholder="Smith"
           aria-label="lastname"
           className="border-2 border-gray-200 p-2 outline-none hover:border-darkVertdeau focus:border-darkVertdeau"
           {...register('lastname')}
@@ -104,6 +106,7 @@ export const Form = () => {
         <input
           type="email"
           id="email"
+          placeholder="smith@example.be"
           aria-label="email"
           className="border-2 border-gray-200 p-2 outline-none hover:border-darkVertdeau focus:border-darkVertdeau"
           {...register('email')}
@@ -128,6 +131,7 @@ export const Form = () => {
         <input
           type="tel"
           id="phone"
+          placeholder="+32487986759"
           aria-label="phone"
           className="border-2 border-gray-200 p-2 outline-none hover:border-darkVertdeau focus:border-darkVertdeau"
           {...register('phone')}
@@ -179,6 +183,7 @@ export const Form = () => {
         <textarea
           id="message"
           aria-label="message"
+          placeholder="Votre message ici..."
           className="border-2 border-gray-200 p-2 resize-none outline-none hover:border-darkVertdeau focus:border-darkVertdeau"
           rows={5}
           {...register('message')}
@@ -251,7 +256,7 @@ export const Form = () => {
         <button
           type="submit"
           disabled={disable || isSubmitting}
-          className="button button--calypso"
+          className="bg-darkVertdeau py-4 px-6 text-gray-700 text-xl hover:bg-vertdeau focus:bg-vertdeau transition-colors"
         >
           {isSubmitting ? (
             <span>Envois en cours...</span>

@@ -45,7 +45,10 @@ export default function Home() {
                 massages, développement personnel, spiritualité, coaching, home
                 organising.
               </p>
-              <Link to={'/services'} className={'button button--calypso'}>
+              <Link
+                to={'/services'}
+                className="bg-darkVertdeau py-4 px-6 text-gray-700 text-xl hover:bg-vertdeau focus:bg-vertdeau transition-colors"
+              >
                 <span>VOIR TOUT</span>
               </Link>
             </div>

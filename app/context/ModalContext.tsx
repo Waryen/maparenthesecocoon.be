@@ -7,12 +7,14 @@ import {
   useState,
 } from 'react';
 
-export const ModalContext = createContext<null | {
+export type ModalProps = {
   isModalOpen: boolean;
   openModal: () => void;
   closeModal: () => void;
   toggleModal: () => void;
-}>(null);
+};
+
+export const ModalContext = createContext<null | ModalProps>(null);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setOpen] = useState(false);
