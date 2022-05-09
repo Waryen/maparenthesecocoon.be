@@ -17,7 +17,7 @@ export const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isSubmitted },
     control,
   } = useForm({
     defaultValues: initialValues,
@@ -255,7 +255,7 @@ export const Form = () => {
       <div className="md:block flex justify-center">
         <button
           type="submit"
-          disabled={disable || isSubmitting}
+          disabled={isSubmitted || isSubmitting}
           className="bg-darkVertdeau py-4 px-6 text-gray-700 text-xl hover:bg-vertdeau focus:bg-vertdeau transition-colors"
         >
           {isSubmitting ? (
