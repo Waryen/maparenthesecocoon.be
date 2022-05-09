@@ -17,7 +17,7 @@ export const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isSubmitted },
+    formState: { errors, isSubmitting },
     control,
   } = useForm({
     defaultValues: initialValues,
@@ -39,8 +39,10 @@ export const Form = () => {
         'Nous rencontrons un problème pour recevoir votre message, veuillez réessayer plus tard.',
         { variant: 'error' }
       );
+      setDisable(true);
     } else {
       enqueueSnackbar('Votre message a été envoyé.', { variant: 'success' });
+      setDisable(true);
     }
   };
 
@@ -255,7 +257,7 @@ export const Form = () => {
       <div className="md:block flex justify-center">
         <button
           type="submit"
-          disabled={isSubmitted || isSubmitting}
+          disabled={disable || isSubmitting}
           className="bg-darkVertdeau py-4 px-6 text-gray-700 text-xl hover:bg-vertdeau focus:bg-vertdeau transition-colors"
         >
           {isSubmitting ? (
