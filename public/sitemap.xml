@@ -1,0 +1,28 @@
+
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://maparenthesecocoon.be/</loc>
+      <lastmod>2022-05-15T08:45:15.303Z</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://maparenthesecocoon.be/about</loc>
+      <lastmod>2022-05-15T08:45:15.303Z</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://maparenthesecocoon.be/contact</loc>
+      <lastmod>2022-05-15T08:45:15.303Z</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://maparenthesecocoon.be/services</loc>
+      <lastmod>2022-05-15T08:45:15.303Z</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://maparenthesecocoon.be/legal</loc>
+      <lastmod>2022-05-15T08:45:15.303Z</lastmod>
+      <priority>1.0</priority>
+    </url>
+  </urlset>
