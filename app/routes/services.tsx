@@ -5,13 +5,14 @@ import { AccordionEls } from '../components/AccordionEls';
 import { useState } from 'react';
 import { Link } from '@remix-run/react';
 import { useWindowSize } from '@reach/window-size';
+import Layout from '~/components/Layout';
 
 export default function Services() {
   const [current, setCurrent] = useState(0);
   const { width } = useWindowSize();
 
   return (
-    <>
+    <Layout>
       <main>
         {/*Soins de soi*/}
         <div className={'grid lg:grid-cols-12 grid-cols-1 lg:mx-32 mx-4'}>
@@ -556,6 +557,6 @@ export default function Services() {
           </p>
         </BottomBanner>
       </main>
-    </>
+    </Layout>
   );
 }

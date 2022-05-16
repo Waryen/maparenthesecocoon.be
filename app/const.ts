@@ -37,3 +37,25 @@ export const initialValues = {
   message: '',
   consent: false,
 };
+
+// auth
+export const getIdentity = () => localStorage.getItem('identity');
+export const setIdentity = (value: string) =>
+  localStorage.setItem('identity', value);
+export const clearIdentity = () => localStorage.removeItem('identity');
+
+export const initialValuesLogin = {
+  email: '',
+  password: '',
+};
+
+export const validationSchemaLogin = yup.object({
+  email: yup
+    .string()
+    .email("Mauvais format d'adresse e-mail")
+    .required('Champs obligatoire'),
+  password: yup
+    .string()
+    .min(10, 'Minimum 10 charactères')
+    .required('Champs obligatoire'),
+});

@@ -1,9 +1,10 @@
+import Layout from '~/components/Layout';
 import { Form } from '../components/Form';
 import { PageTitle } from '../components/PageTitle';
 
 export default function Contact() {
   return (
-    <>
+    <Layout>
       <main className="lg:grid grid-cols-12 lg:mx-32 mx-4 mb-12">
         <div className={'col-span-4'}>
           <PageTitle title={'Ecrivez-moi'} />
@@ -13,6 +14,6 @@ export default function Contact() {
           <Form />
         </div>
       </main>
-    </>
+    </Layout>
   );
 }

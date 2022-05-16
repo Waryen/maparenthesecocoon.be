@@ -1,10 +1,11 @@
 import { PageTitle } from '../components/PageTitle';
 import { Link } from '@remix-run/react';
 import { BottomBanner } from '../components/BottomBanner';
+import Layout from '~/components/Layout';
 
 export default function About() {
   return (
-    <>
+    <Layout>
       <main>
         <div className="lg:grid grid-cols-12 lg:mx-32 mx-4">
           <div className={'col-span-4'}>
@@ -55,6 +56,6 @@ export default function About() {
           }
         />
       </main>
-    </>
+    </Layout>
   );
 }

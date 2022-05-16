@@ -1,10 +1,11 @@
-import { PageTitle } from '../components/PageTitle';
-import { Link } from '@remix-run/react';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import { Link } from '@remix-run/react';
+import Layout from '~/components/Layout';
+import { PageTitle } from '../components/PageTitle';
 
 export default function Legal() {
   return (
-    <>
+    <Layout>
       <main>
         <div className={'lg:grid grid-cols-12 lg:mx-32 mx-4'}>
           <div className={'col-span-4'}>
@@ -133,6 +134,6 @@ export default function Legal() {
           </div>
         </div>
       </main>
-    </>
+    </Layout>
   );
 }

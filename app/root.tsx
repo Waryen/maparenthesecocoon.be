@@ -8,8 +8,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { SnackbarProvider } from 'notistack';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { AuthProvider } from './context/AuthContext';
 import { ModalProvider } from './context/ModalContext';
 import tailwindcss from './styles/tailwind.css';
 
@@ -54,16 +53,16 @@ export default function App() {
         ></script>
       </head>
       <body>
-        <SnackbarProvider>
-          <ModalProvider>
-            <Header />
-            <Outlet />
-            <Footer />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-          </ModalProvider>
-        </SnackbarProvider>
+        <AuthProvider>
+          <SnackbarProvider>
+            <ModalProvider>
+              <Outlet />
+              <ScrollRestoration />
+              <Scripts />
+              <LiveReload />
+            </ModalProvider>
+          </SnackbarProvider>
+        </AuthProvider>
       </body>
     </html>
   );

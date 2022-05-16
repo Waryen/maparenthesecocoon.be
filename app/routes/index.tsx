@@ -1,7 +1,8 @@
-import { PageTitle } from '../components/PageTitle';
-import { Link } from '@remix-run/react';
 import { PlusIcon } from '@radix-ui/react-icons';
+import { Link } from '@remix-run/react';
+import Layout from '~/components/Layout';
 import { GalleryPhotos } from '../components/GalleryPhotos';
+import { PageTitle } from '../components/PageTitle';
 
 export default function Home() {
   const slides = [
@@ -32,7 +33,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <Layout>
       <main>
         <div className="lg:grid grid-cols-12 gap-y-4 lg:mx-32 mx-4">
           <div className={'col-span-4'}>
@@ -77,6 +78,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+    </Layout>
   );
 }
