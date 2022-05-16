@@ -15,7 +15,7 @@ export type LoginValues = {
   password: string;
 };
 
-export default function Index() {
+export default function Admin() {
   const {
     register,
     handleSubmit,

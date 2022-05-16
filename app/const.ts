@@ -38,17 +38,19 @@ export const initialValues = {
   consent: false,
 };
 
-// auth
+// identity
 export const getIdentity = () => localStorage.getItem('identity');
 export const setIdentity = (value: string) =>
   localStorage.setItem('identity', value);
 export const clearIdentity = () => localStorage.removeItem('identity');
 
+// login form inital values values
 export const initialValuesLogin = {
   email: '',
   password: '',
 };
 
+// login form schema validation
 export const validationSchemaLogin = yup.object({
   email: yup
     .string()
