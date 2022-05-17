@@ -6,9 +6,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from '@remix-run/react';
 import { SnackbarProvider } from 'notistack';
-import { AuthProvider } from './context/AuthContext';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Layout from './components/Layout';
 import { ModalProvider } from './context/ModalContext';
 import tailwindcss from './styles/tailwind.css';
 
@@ -53,16 +56,56 @@ export default function App() {
         ></script>
       </head>
       <body>
-        <AuthProvider>
-          <SnackbarProvider>
-            <ModalProvider>
-              <Outlet />
-              <ScrollRestoration />
-              <Scripts />
-              <LiveReload />
-            </ModalProvider>
-          </SnackbarProvider>
-        </AuthProvider>
+        <SnackbarProvider>
+          <ModalProvider>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </ModalProvider>
+        </SnackbarProvider>
+      </body>
+    </html>
+  );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+  let message = '';
+
+  switch (caught.status) {
+    case 404: {
+      message = "Cette page n'existe pas!";
+    }
+  }
+
+  return (
+    <html lang="fr">
+      <head>
+        <Meta />
+        <Links />
+        <script
+          defer
+          data-domain="maparenthesecocoon.be"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
+      </head>
+      <body>
+        <SnackbarProvider>
+          <ModalProvider>
+            <Layout>
+              <main className="flex items-center justify-center flex-col">
+                <h2 className="text-2xl md:text-4xl">
+                  Erreur: {caught.status}
+                </h2>
+                <p>{message}</p>
+              </main>
+            </Layout>
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </ModalProvider>
+        </SnackbarProvider>
       </body>
     </html>
   );

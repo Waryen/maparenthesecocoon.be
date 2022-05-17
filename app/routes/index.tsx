@@ -41,7 +41,7 @@ export default function Home() {
           </div>
           <div className="w-full col-span-8 lg:mt-8">
             <div className={'text-gray-700'}>
-              <p className={'mb-8 text-2xl font-bold'}>
+              <p className={'mb-8 text-xl md:text-2xl font-bold'}>
                 Équilibre en soi et son foyer, Soins énergétiques, sonothérapie,
                 massages, développement personnel, spiritualité, coaching, home
                 organising.
